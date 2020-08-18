@@ -6,7 +6,7 @@ This section presents MP3 samples, containing an ID3v2 tag, that create a multim
 Multimedia experiances can be stored in different ways - see (1).
 
 # Some frames of a ID3v2 tag and their name
-This table shows some frames of a ID3v2.3 or ID3v2.4 tag. For more information - see (2), (3) and (4).
+This table shows some frames of an ID3v2.3 or ID3v2.4 tag. For more information - see (2), (3) and (4).
 
 | Frame | Known as                               |
 |:----- |:-------------------------------------- |
