@@ -16,7 +16,7 @@ This table shows some frames of a ID3v2.3 or ID3v2.4 tag. For more information -
 | TRCK  | Track Nr.                              |
 | TPE1  | Interpret                              |
 | COMM  | Comment                                |
-| TDRC  | Date of Recording (at least the Year)  |
+| TDRC  | Date of Recording (at least the year)  |
 | APIC  | Image                                  |
 | SYLT  | Text and synchronising timestamps      |
 
