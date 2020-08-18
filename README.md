@@ -30,7 +30,7 @@ Every image is stored in a APIC frame. In this example, the name of the image fi
 
 The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this example, the text of a certain timestamp may contain the name of a picture file. This way, also pictures can appear synchron to the audio. The name of a picture is embedded in the text this way:
 
-&lt;img src="image.jpg"&gt;
+some text &lt;img src="image.jpg"&gt; some text
 
 # mm02_543210.mp3
 Example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains the text in the SubRip format for subtitles (5).
