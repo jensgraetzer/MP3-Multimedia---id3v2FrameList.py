@@ -33,7 +33,7 @@ The SYLT frame contains timestamps. Each timestamp has got some text. So this te
 &lt;img src="image.jpg"&gt;
 
 # mm02_543210.mp3
-Example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, is invented and used. This XSRT frame has a structure similar to the USLT frame, but contains the text in the SubRip format for subtitles (5).
+Example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains the text in the SubRip format for subtitles (5).
 
 # References
 1. J. Grätzer, Multimedia Data Categories, 2020
