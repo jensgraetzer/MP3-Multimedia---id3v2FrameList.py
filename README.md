@@ -9,7 +9,7 @@ Multimedia experiances can be stored in different ways - see (1).
 This table shows some frames of an ID3v2.3 or ID3v2.4 tag. For more information - see (2), (3) and (4).
 
 | Frame | Known as                               |
-|:----- |:-------------------------------------- |
+|:-----:|:-------------------------------------- |
 | TCON  | Genre                                  |
 | TALB  | Album                                  |
 | TIT2  | Title                                  |
