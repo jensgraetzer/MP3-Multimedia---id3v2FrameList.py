@@ -18,10 +18,16 @@ This section presents MP3 samples, containing a ID3v2 tag, that build a multimed
 | SYLT  | Text and synchronising timestamps  |
 
 # id3v2FrameList.py
-This python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
+This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
 
 # mm01_presentation.mp3
-Example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. Therefore the SYLT frame is used. 
+Example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. Therefore the timestamps given in the SYLT frame were used.
+
+Every image is stored in a APIC frame. In this example, the name of the image file is given in the frame field "description".
+
+The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this example, the text of a certain timestamp may contain the name of a picture file. This way, also pictures can appear synchron to the audio. The name of a picture is embedded in the text this way:
+
+<img src="image.jpg">
 
 # mm02_543210.mp3
 Example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, is invented and used. This XSRT frame has a structure similar to the USLT frame. It contains the text in SRT format.
