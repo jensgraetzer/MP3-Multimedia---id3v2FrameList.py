@@ -3,22 +3,22 @@ MP3 files store audio data. Most MP3 files have a ID3v2 tag. In a ID3v2 there is
 
 This section presents MP3 samples, containing a ID3v2 tag, that build a multimedial user experiance. 
 
-Multimedia Experiances can be stored in different ways - see (1)
+Multimedia Experiances can be stored in different ways - see (1).
 
 # Some frames of a ID3v2 tag and their name
-This table shows some frames of a ID3v2.3 or ID3v2.4 tag. For more informattion - see (2), (3), (4).
+This table shows some frames of a ID3v2.3 or ID3v2.4 tag. For more information - see (2), (3) and (4).
 
-| Frame | Known as                           |
-|:----- |:---------------------------------- |
-| TCON  | Genre                              |
-| TALB  | Album                              |
-| TIT2  | Title                              |
-| TRCK  | Track Nr.                          |
-| TPE1  | Interpret                          |
-| COMM  | Comment                            |
-| TDRC  | Date of Recording (at least Year)  |
-| APIC  | Image                              |
-| SYLT  | Text and synchronising timestamps  |
+| Frame | Known as                               |
+|:----- |:-------------------------------------- |
+| TCON  | Genre                                  |
+| TALB  | Album                                  |
+| TIT2  | Title                                  |
+| TRCK  | Track Nr.                              |
+| TPE1  | Interpret                              |
+| COMM  | Comment                                |
+| TDRC  | Date of Recording (at least the Year)  |
+| APIC  | Image                                  |
+| SYLT  | Text and synchronising timestamps      |
 
 # id3v2FrameList.py
 This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
