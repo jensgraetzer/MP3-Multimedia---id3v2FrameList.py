@@ -32,7 +32,7 @@ The SYLT frame contains timestamps. Each timestamp has got some text. So this te
 
 some text &lt;img src="image.jpg"&gt; some text
 
-In a multimedia MP3 file may be more than one picture, e.g. more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. The size of the cover image is 600 by 600 pixels. Some MP3 player display that cover image.
+In a multimedia MP3 file may be more than one picture, e.g. more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. The size of the cover image is 600 by 600 pixels. The cover image is sort of an icon of the MP3 file.
 
 # id3v2FrameList.py
 This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
