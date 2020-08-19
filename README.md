@@ -30,7 +30,7 @@ Every image is stored in a APIC frame. In the first example, the name of the ima
 
 The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this example, the text of a certain timestamp may contain the name of a picture file. This way, also pictures can appear synchron to the audio. The name of a picture is embedded in the text this way:
 
-some text &lt;img src="image.jpg"&gt; some text
+... text &lt;img src="image.jpg"&gt; text ...
 
 In a multimedia MP3 file may be more than one picture, e.g. more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. The size of the cover image is 600 by 600 pixels. The cover image is sort of an icon of the MP3 file.
 
