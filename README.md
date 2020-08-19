@@ -5,7 +5,7 @@ This project presents some MP3 files, containing an ID3v2 tag, that creates a mu
 
 Multimedia experiences can be stored in different ways - see (1).
 
-In summer 2020 no mulimedia MP3 players exist. So the multimedia MP3 samples of this project together with the ID3v2 standards - see (2), (3) and (4) - may help to build the first players and editors of multimedia MP3 files.
+Today (in summer 2020) almost no multimedia MP3 player application exists. So the multimedia MP3 samples of this project together with the ID3v2 standards - see (2), (3) and (4) - may help to build the first player and editor applications of multimedia MP3 files.
 
 # About the frames of a ID3v2 tag
 This table shows some frames of an ID3v2.3 or ID3v2.4 tag. There are a lot more frames. For more information - see the ID3v2 standards (2), (3) and (4).
