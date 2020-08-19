@@ -41,7 +41,7 @@ This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of
 This is the first example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. Therefore the timestamps given in the SYLT frame were used.
 
 # mm02_543210.mp3
-This is the second example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains the text in the SubRip format for subtitles (5).
+This is the second example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (5).
 
 # References
 1. J. Grätzer, Multimedia Data Categories, 2020
