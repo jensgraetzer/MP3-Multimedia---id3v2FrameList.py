@@ -47,7 +47,7 @@ This is the second example of a MP3 multimedia file. It contains audio data, a c
 1. J. Grätzer, Multimedia Data Categories, 2020
 https://github.com/jensgraetzer/MP3-Pictures-Exporter/blob/master/Multimedia-Data-Categories.pdf (last visited 2020-06-11)
 2. J. Grätzer, MP3 Multimedia Player app at the Microsoft Store,
-https://www.microsoft.com/de-de/p/mp3-multimedia/9nt7d443vx86
+https://www.microsoft.com/de-de/p/mp3-multimedia/9nt7d443vx86 (last visited 2020-08-16)
 3. M. Nilsson, Informal Standard: ID3 tag version 2.4.0 - Main Structure, 2000,
 https://id3.org/id3v2.4.0-structure (last visited 2020-06-11)
 4. M. Nilsson, Informal Standard: ID3 tag version 2.4.0 - Native Frames, 2000,
