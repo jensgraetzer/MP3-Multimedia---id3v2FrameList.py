@@ -24,7 +24,7 @@ This table shows some frames of an ID3v2.3 or ID3v2.4 tag. There are a lot more 
 
 In the multimedia MP3 files of this project the content of the TCON frame is "Multimedia".
 
-Multimedia MP3 files contain images and text, that is synchronised with the audio by timestamps. So the frames APIC and SYLT are very important. The ID3v2 standard allows experimental frames. The XSRT frame of the second example is an example of an experimental frame. 
+Multimedia MP3 files contain images and text, that is synchronised with the audio by timestamps. So the frames APIC and SYLT are very important. The ID3v2 standard allows experimental frames. The XSRT frame of the second example is an experimental frame. 
 
 Every image is stored in a APIC frame. In the first example, the name of the image file is given in the frame field "description".
 
