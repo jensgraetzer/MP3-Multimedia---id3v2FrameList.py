@@ -28,20 +28,23 @@ Multimedia MP3 files contain images and text, that is synchronised with the audi
 
 Every image is stored in a APIC frame. In the first example, the name of the image file is given in the frame field "description".
 
-The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this example, the text of a certain timestamp may contain the name of a picture file. This way, also pictures can appear synchron to the audio. The name of a picture is embedded in the text this way:
+The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this examples, the text of a certain timestamp may contain the name of a image file. This way, also pictures can appear synchron to the audio. If the SYLT frame content descriptor is 8, it contains the pure image file names only. Otherwise, the name of a image is embedded in the text this way:
 
 ... text &lt;img src="image.jpg"&gt; text ...
 
-In a multimedia MP3 file may be more than one picture. Thus, there may be more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. In this examples, the size of it is 600 by 600 pixels. A cover image is sort of an icon of the MP3 file.
+In a multimedia MP3 file may be more than one images. Thus, there may be more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. In this examples, the size of it is 600 by 600 pixels. A cover image is sort of an icon of the MP3 file.
 
 # id3v2FrameList.py
 This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
 
 # mm01_presentation.mp3
-This is the first example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. The synchronisation is done by a SYLT frame.
+This is the first example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. The synchronisation is done by a SYLT frame with content type other than 8.
 
 # mm02_543210.mp3
 This is the second example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6).
+
+# mm03_briefmark.mp3
+This example contains 3 APIC frames. The synchronisation of the images is done by a SYLT frame with content type 8. So the SYLT frame contains only image file names. Additionally, this example contains a USLT frame.
 
 # References
 1. J. Grätzer, Multimedia Data Categories, 2020
