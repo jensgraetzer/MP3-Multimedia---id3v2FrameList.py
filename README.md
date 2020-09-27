@@ -7,7 +7,7 @@ Multimedia experiences can be stored in different ways - see (1).
 
 Today (in summer 2020) only one multimedia MP3 player application exists - see (2). So the multimedia MP3 samples of this project together with the ID3v2 standards - see (3), (4) and (5) - may help to build more player applications of multimedia MP3 files, and editor applications as well.
 
-# About the frames of a ID3v2 tag
+# ID3v2 frames of a multimedia MP3 file
 This table shows some frames of an ID3v2.3 or ID3v2.4 tag. There are a lot more frames. For more information - see the ID3v2 standards (3), (4) and (5).
 
 | Frame | Known as                               |
@@ -22,28 +22,49 @@ This table shows some frames of an ID3v2.3 or ID3v2.4 tag. There are a lot more 
 | APIC  | Image                                  |
 | SYLT  | Text and synchronising timestamps      |
 
-In the multimedia MP3 files of this project the content of the TCON frame is "Multimedia".
+## Additional requirements
+This text defines the way, how to use the ID3v2 tag for the purpose of multimedia MP3 files. A multimedia MP3 file should meet these additional requirements:
 
-Multimedia MP3 files contain images and text, that is synchronised with the audio by timestamps. So the frames APIC and SYLT are very important. The ID3v2 standard allows experimental frames. The XSRT frame of the second example is an experimental frame. 
+1. In multimedia MP3 files only the ID3v2.4 version tag should be used. Supporting only that tag version, but not the ID3v2.3 tag version, makes the player development less complicated.
+2. In multimedia MP3 files the  ID3v2.4 version tag should be at the beginning of the MP3 file only, not at the end.
+3. There should not be an extended ID3v2 tag header.
+4. Within the SYLT frame the time format is milliseconds only, not MPEG frames.
+5. In all multimedia MP3 files the content of the TCON frame always should be "Multimedia". 
+6. In APIC frames of an multimedia MP3 file the "description" field contains the picture file name.
+7. Recommended image size of the image in the first APIC frame (in the cover image) is 600 by 600 pixels. 
 
-Every image is stored in a APIC frame. In the first example, the name of the image file is given in the frame field "description".
+## Showing images at times, defined by a SYLT frame
 
-The SYLT frame contains timestamps. Each timestamp has got some text. So this text can be displayed synchron to the audio. In this examples, the text of a certain timestamp may contain the name of a image file. This way, also pictures can appear synchron to the audio. If the SYLT frame content descriptor is 8, it contains the pure image file names only. Otherwise, the name of a image is embedded in the text this way:
+Multimedia MP3 files contain images and text, synchronized with the audio by timestamps. Images can be stored in APIC frames. Timing information can be stored in a SYLT frame. There are two possible ways:
 
-... text &lt;img src="image.jpg"&gt; text ...
+1. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has content type 8. The text of every timestamp of the SYLT frame stores one single filename of an image.
 
-In a multimedia MP3 file may be more than one images. Thus, there may be more than one APIC frame. In the multimedia MP3 files of this project the first APIC frame contains the cover image. In this examples, the size of it is 600 by 600 pixels. A cover image is sort of an icon of the MP3 file.
+2. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has a content type smaller than 8. In this case the text of a SYLT frame time stamp is subtitle text. It is allowed to embed an imagefile name into the subtitle text. This can be done by writing the image file name in a HTML like image tag. So it looks like <img src="image file name">. Additionally, some other HTML like tags are allowed. These are the tags allowed: <b>...</b>, <i>...</i>, <u>...</u> and <font color="color name">...</font>. Other than these HTML tags aren’t allowed.
 
-# id3v2FrameList.py
+## The new XSRT frame
+
+The ID3v2 standard allows experimental frames. The XSRT frame is an experimental frame, invented for multimedia MP3 files. It presents a third way for showing text and images, synchronized with the audio by timestamps.
+
+An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some other HTML like tags are allowed. These tags are allowed: <b>...</b>, <i>...</i>, <u>...</u>, <font color="color name">...</font> and <img src="image file name">. Other than these HTML tags were not allowed.
+
+## APIC frames
+
+An APIC frame stores an image. A multimedia MP3 file may may contain more than one image. Thus, there may be more than one APIC frame. In multimedia MP3 files, the frame field "description" contains the image file name.
+
+The first APIC frame of a multimedia MP3 file will be used as the cover image. A cover image is sort of an icon of the MP3 file, that is shown by the file picker of the player. It is recommended the image to be a quadrat of 600 by 600 pixels. 
+
+# Files of this repository
+
+## id3v2FrameList.py
 This Python script lists the frame names, found in the ID3v2.3 or ID3v2.4 tag of a MP3 file.
 
-# mm01_presentation.mp3
+## mm01_presentation.mp3
 This is the first example of a MP3 multimedia file. It contains audio data, a cover image, 4 more images in the format 16x9 and text. The appearance of the text and the images is syncronised with the audio. The synchronisation is done by a SYLT frame with content type other than 8.
 
-# mm02_543210.mp3
+## mm02_543210.mp3
 This is the second example of a MP3 multimedia file. It contains audio data, a cover image and text. The appearance of the text is syncronised with the audio. Therefore an experimental frame, called XSRT, has been invented and used. This XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6).
 
-# mm03_briefmark.mp3
+## mm03_briefmark.mp3
 This example contains 3 APIC frames. The synchronisation of the images is done by a SYLT frame with content type 8. So the SYLT frame contains only image file names. Additionally, this example contains a USLT frame.
 
 # References
