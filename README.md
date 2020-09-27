@@ -31,7 +31,7 @@ This text defines the way, how to use the ID3v2 tag for the purpose of multimedi
 4. Within the SYLT frame the time format is milliseconds only, not MPEG frames.
 5. In all multimedia MP3 files the content of the TCON frame always should be "Multimedia". 
 6. In APIC frames of an multimedia MP3 file the "description" field contains the picture file name.
-7. Recommended image size of the image in the first APIC frame (in the cover image) is 600 by 600 pixels. 
+7. Recommended image size of the image in the first APIC frame (this will be the cover image of the MP3 file) is 600 by 600 pixels. 
 
 ## Showing images at times, defined by a SYLT frame
 
