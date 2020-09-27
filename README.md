@@ -25,7 +25,7 @@ This table shows some frames of an ID3v2.3 or ID3v2.4 tag. There are a lot more 
 ## Additional requirements
 This text defines the way, how to use the ID3v2 tag for the purpose of multimedia MP3 files. A multimedia MP3 file should meet these additional requirements:
 
-1. In multimedia MP3 files only the ID3v2.4 version tag should be used. Supporting only that tag version, but not the ID3v2.3 tag version, makes the player development less complicated.
+1. In multimedia MP3 files only the ID3v2.4 version tag should be used. Using only that tag version, but not the ID3v2.3 tag version, makes the player development less complicated.
 2. In multimedia MP3 files the  ID3v2.4 version tag should be at the beginning of the MP3 file only, not at the end.
 3. There should not be an extended ID3v2 tag header.
 4. Within the SYLT frame the time format is milliseconds only, not MPEG frames.
