@@ -39,13 +39,13 @@ Multimedia MP3 files contain images and text, synchronized with the audio by tim
 
 1. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has content type 8. The text of every timestamp of the SYLT frame stores one single filename of an image.
 
-2. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has a content type smaller than 8. In this case the text of a SYLT frame time stamp is subtitle text. It is allowed to embed an imagefile name into the subtitle text. This can be done by writing the image file name in a HTML like image tag. So it looks like <img src="image file name">. Additionally, some other HTML like tags are allowed. These are the tags allowed: <b>...</b>, <i>...</i>, <u>...</u> and <font color="color name">...</font>. Other than these HTML tags aren’t allowed.
+2. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has a content type smaller than 8. In this case the text of a SYLT frame time stamp is subtitle text. It is allowed to embed an imagefile name into the subtitle text. This can be done by writing the image file name in a HTML like image tag. So it looks like &lt;img src="image file name"&gt;. Additionally, some other HTML like tags are allowed. These are the tags allowed: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt; and &lt;font color="color name"&gt;...&lt;/font&gt;. Other than these HTML tags aren’t allowed.
 
 ## The new XSRT frame
 
 The ID3v2 standard allows experimental frames. The XSRT frame is an experimental frame, invented for multimedia MP3 files. It presents a third way for showing text and images, synchronized with the audio by timestamps.
 
-An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some other HTML like tags are allowed. These tags are allowed: <b>...</b>, <i>...</i>, <u>...</u>, <font color="color name">...</font> and <img src="image file name">. Other than these HTML tags were not allowed.
+An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some other HTML like tags are allowed. These tags are allowed: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt; and &lt;img src="image file name"&gt;. Other than these HTML tags were not allowed.
 
 ## APIC frames
 
