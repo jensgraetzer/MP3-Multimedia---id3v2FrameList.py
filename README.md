@@ -45,7 +45,7 @@ Multimedia MP3 files contain images and text, synchronized with the audio by tim
 
 The ID3v2 standard allows experimental frames. The XSRT frame is an experimental frame, invented for multimedia MP3 files. It presents a third way for showing text and images, synchronized with the audio by timestamps.
 
-An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some other HTML like tags are allowed. These tags are allowed: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt; and &lt;img src="image file name"&gt;. Other than these HTML tags are not allowed.
+An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt; and &lt;img src="image file name"&gt;. Other than these HTML tags are not allowed.
 
 ## APIC frames
 
