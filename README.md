@@ -49,7 +49,7 @@ An XSRT frame has a structure similar to the USLT frame, but contains subtitle t
 
 ## APIC frames
 
-An APIC frame stores an image. A multimedia MP3 file may may contain more than one image. Thus, there may be more than one APIC frame. In multimedia MP3 files, the frame field "description" contains the image file name.
+An APIC frame stores an image. A multimedia MP3 file may contain more than one image. Thus, there may be more than one APIC frame. In multimedia MP3 files, the frame field "description" contains the image file name.
 
 The first APIC frame of a multimedia MP3 file will be used as the cover image. A cover image is sort of an icon of the MP3 file, that is shown by the file picker of the player. It is recommended the image to be a quadrat of 600 by 600 pixels. 
 
