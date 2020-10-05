@@ -45,13 +45,21 @@ Multimedia MP3 files contain images and text, synchronized with the audio by tim
 
 The ID3v2 standard allows experimental frames. The XSRT frame is an experimental frame, invented for multimedia MP3 files. It presents a third way for showing text and images, synchronized with the audio by timestamps.
 
-An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt; and &lt;img src="image file name"&gt;. Other than these HTML tags are not allowed.
+An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed by the SRT standard and subsequently are allowed in the XSRT frame too: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt;. Additionally a image tag is allowd - &lt;img src="image file name"&gt;. The image frame indicates, that an image appeares at the screen at the start time of that certain title. There is no more than one image tag in a certain SRT text title. The image doesn't disappeare at the end time of this title. The image only can be replaced by an other image, defined by in a title of an other start time.
 
 ## APIC frames
 
 An APIC frame stores an image. A multimedia MP3 file may contain more than one image. Thus, there may be more than one APIC frame. In multimedia MP3 files, the frame field "description" contains the image file name.
 
 The first APIC frame of a multimedia MP3 file will be used as the cover image. A cover image is sort of an icon of the MP3 file, that is shown by the file picker of the player. It is recommended the image to be a quadrat of 600 by 600 pixels. 
+
+## Multipe SYLT and XSRT frames
+
+There can be more than one SYLT or XSRT frame. It is strongly recommended, that the timing of the images is done by only one of these frames. So, the other SYLT or XSRT frames contain text only, perhaps text translations into other languages.
+
+If there is more than one SYLT or XSRT frame, the timing of the images should be done by a SYLT frame with content type 8. HTML image tags in a SYLT or XSRT frame should be used only in the case, if there is only one SYLT or XSRT frame within the ID3 tag.
+
+There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be the whole string language name, e.g. "Français" (for French) or "Русский" (for Russian).
 
 # Files of this repository
 
