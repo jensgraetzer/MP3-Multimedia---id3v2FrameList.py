@@ -55,11 +55,11 @@ The first APIC frame of a multimedia MP3 file will be used as the cover image. A
 
 ## Multipe SYLT and XSRT frames
 
-There can be more than one SYLT or XSRT frame. It is strongly recommended, that the timing of the images is done by only one of these frames. So, the other SYLT or XSRT frames contain text only, perhaps text translations into other languages.
+There may be more than one SYLT or XSRT frame. It is strongly recommended, that the timing of the images is done by only one of these frames. So, the other SYLT or XSRT frames contain text only, perhaps text translations into other languages.
 
 If there is more than one SYLT or XSRT frame, the timing of the images should be done by a SYLT frame with content type 8. HTML image tags in a SYLT or XSRT frame should be used only in the case, if there is only one single SYLT or XSRT frame within the ID3 tag.
 
-There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be the whole string language name, e.g. "Français" (for French) or "Русский" (for Russian).
+There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g. "Français" (for French) or "Русский" (for Russian).
 
 # Files of this repository
 
