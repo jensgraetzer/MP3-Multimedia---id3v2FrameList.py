@@ -59,7 +59,7 @@ There may be more than one SYLT or XSRT frame. It is strongly recommended, that 
 
 If there is more than one SYLT or XSRT frame, the timing of the images should be done by a single SYLT frame with content type 8. HTML image tags in a SYLT or XSRT frame should be used only in the case, if there is only one single SYLT or XSRT frame within the ID3 tag.
 
-There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g. "Français" (for French) or "Русский" (for Russian).
+There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g.  "1 English" (for English)  "2 Français" (for French) or "3 Русский" (for Russian). The numbers in front of the language names will sort them in the menu.
 
 # Files of this repository
 
