@@ -45,7 +45,7 @@ There is never more than one image tag in a certain SRT text title. The first im
 
 ## The new XSRT frame
 
-The ID3v2 standard allows experimental frames. The XSRT frame is such an experimental frame, invented for multimedia MP3 files. It presents way for showing text, synchronized with the audio by timestamps.
+The ID3v2 standard allows experimental frames. The XSRT frame is such an experimental frame. It was invented within of this project. It presents way for showing text, synchronized with the audio by timestamps.
 
 An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed by the SRT standard and subsequently are allowed in the XSRT frame too. It is &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt;. 
 
@@ -57,11 +57,13 @@ The first APIC frame of a multimedia MP3 file will be used as the cover image. A
 
 ## Multipe SYLT and XSRT frames
 
-There may be more than one SYLT or XSRT frame. It is strongly recommended, that the timing of the images is done by only one of these frames. So, the other SYLT or XSRT frames contain text only, perhaps text translations into other languages.
+There may be more than one SYLT frame. It is strongly recommended, that the timing of the images is done by only one of these SYLT frames. So, the other SYLT frames contain text only, perhaps text translations into other languages. The first SYLT frame within an ID3 tag, that contains text, is the one with the original language. 
 
-If there is more than one SYLT or XSRT frame, the timing of the images should be done by a single SYLT frame with content type 8. HTML image tags in a SYLT or XSRT frame should be used only in the case, if there is only one single SYLT or XSRT frame within the ID3 tag.
+If there is more than one SYLT frame, the timing of the images should be done by a single SYLT frame with content type 8. Putting HTML image tags into SYLT frames with content type less than 7 should be done only in that case, that this is the only SYLT frame within the ID3 tag. The SYLT frame with content type 8 should be the first SYLT frame within the ID3 tag.
 
-There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g.  "English" or "Français" or "Русский".
+There may be more than one XSRT frames as well. The first one within a ID3 tag, that contains text (content type less than 7), is the one with the original language.
+
+There may be more than one SYLT or XSRT frames in an ID3 tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g.  "English" or "Français" or "Русский".
 
 # Files of this repository
 
