@@ -35,17 +35,19 @@ This text defines the way, how to use the ID3v2 tag for the purpose of multimedi
 
 ## Showing images at times, defined by a SYLT frame
 
-Multimedia MP3 files contain images and text, synchronized with the audio by timestamps. Images can be stored in APIC frames. Timing information can be stored in a SYLT frame. There are two possible ways:
+Multimedia MP3 files contain images and text, synchronized with the audio by timestamps. Images can be stored in APIC frames. Every APIC frame must have the filename stored in the content description field. A SYLT frame contains timestamps. A timestamp can contain an image filename as well. For showing a certain image at a certain timestamp, there are two possible ways:
 
-1. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has content type 8. The text of every timestamp of the SYLT frame stores one single filename of an image.
+1. The SYLT frame has content type 8. The text of every timestamp of the SYLT frame is one single image filename.
 
-2. There are several images, each in a separate APIC frame. Each APIC frame has the filename of the image stored in the field “description”. The SYLT frame has a content type smaller than 7. In this case the text of a SYLT frame time stamp is subtitle text. It is allowed to embed an imagefile name into the subtitle text. This can be done by writing the image file name in a HTML like image tag. So it looks like &lt;img src="image file name"&gt;. Additionally, some other HTML like tags are allowed. This is these tags: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt; and &lt;font color="color name"&gt;...&lt;/font&gt;. Other than these HTML tags are not allowed.
+2. The SYLT frame has a content type smaller than 7. In this case the text of a SYLT frame time stamp is subtitle text. It is allowed to embed an imagefile name into the subtitle text. This can be done by writing the image file name in a HTML like image tag. So it looks like &lt;img src="image file name"&gt;. Additionally, some other HTML like tags are allowed. This is these tags: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt; and &lt;font color="color name"&gt;...&lt;/font&gt;. Other than these HTML tags are not allowed.
+
+There is never more than one image tag in a certain SRT text title. The first image timestamp must be 0 milliseconds. An image can not be deleted from the screen. It can only be replaced by an other image, at an other timestamp event of the SYLT frame.
 
 ## The new XSRT frame
 
-The ID3v2 standard allows experimental frames. The XSRT frame is an experimental frame, invented for multimedia MP3 files. It presents a third way for showing text and images, synchronized with the audio by timestamps.
+The ID3v2 standard allows experimental frames. The XSRT frame is such an experimental frame, invented for multimedia MP3 files. It presents way for showing text, synchronized with the audio by timestamps.
 
-An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed by the SRT standard and subsequently are allowed in the XSRT frame too: &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt;. Additionally a image tag is allowd - &lt;img src="image file name"&gt;. The image frame indicates, that an image appeares at the screen at the start time of that certain title. There is no more than one image tag in a certain SRT text title. The image doesn't disappeare at the end time of this title. The image only can be replaced by an other image, defined by in a title of an other start time.
+An XSRT frame has a structure similar to the USLT frame, but contains subtitle text in the SubRip format (6). So, audiosynchron subtitle text can be displayed. Additionally, some HTML like tags are allowed. These tags are allowed by the SRT standard and subsequently are allowed in the XSRT frame too. It is &lt;b&gt;...&lt;/b&gt;, &lt;i&gt;...&lt;/i&gt;, &lt;u&gt;...&lt;/u&gt;, &lt;font color="color name"&gt;...&lt;/font&gt;. 
 
 ## APIC frames
 
@@ -59,7 +61,7 @@ There may be more than one SYLT or XSRT frame. It is strongly recommended, that 
 
 If there is more than one SYLT or XSRT frame, the timing of the images should be done by a single SYLT frame with content type 8. HTML image tags in a SYLT or XSRT frame should be used only in the case, if there is only one single SYLT or XSRT frame within the ID3 tag.
 
-There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g.  "1 English" (for English)  "2 Français" (for French) or "3 Русский" (for Russian). The numbers in front of the language names will sort them in the menu.
+There may be more than one SYLT or XSRT frames in a tag, but only one with the same language and content descriptor. The content descriptor should be a language name, e.g.  "English" or "Français" or "Русский".
 
 # Files of this repository
 
