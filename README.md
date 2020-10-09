@@ -80,7 +80,7 @@ This is the second example of a MP3 multimedia file. It contains audio data, a c
 This example contains 3 APIC frames. The synchronisation of the images is done by a SYLT frame with content type 8. So the SYLT frame contains only image file names. Additionally, this example contains a USLT frame.
 
 ## mm04_hamlet.mp3
-This example contains a cover image and only one more image. A SYLT frame is needed, to show the image at 0 milliseconds. There are three XSRT frames. They contain SRT subtitles in english, german and russian languages. These SRT subtitles contain some formatting HTML tags.
+This example contains a cover image and only one more image. There is a SYLT frame with the timestamp 0 milliseconds, that brings this image into the display. There are three XSRT frames. They contain SRT subtitles in english, german and russian languages. These SRT subtitles contain some formatting HTML tags.
 
 # References
 1. J. Grätzer, Multimedia Data Categories, 2020
