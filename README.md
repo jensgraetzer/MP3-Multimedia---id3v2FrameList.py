@@ -1,9 +1,7 @@
 # MP3-Multimedia
-MP3 files store audio data. Most MP3 files have an ID3v2 tag. In an ID3v2 there is other data stored - text, images and time stamp information. Combining this different data types in a smart way makes it possible to store a multimedial experience in a MP3 file.
+MP3 files store audio data. Most MP3 files have an ID3v2 tag. In an ID3v2 there is other data stored - text, images and time stamp information. Combining this different data types in a single file is a smart way to store a multimedial experience in a MP3 file. It is one of the ways, how multimedial experiences can be stored - see (1).
 
-This project presents some MP3 files, containing an ID3v2 tag, that creates a multimedial experience. 
-
-Multimedia experiences can be stored in different ways - see (1).
+This project presents MP3 files, containing an ID3v2 tag, that creates a multimedial experience. 
 
 Today (in summer 2020) only one multimedia MP3 player application exists - see (2). So the multimedia MP3 samples of this project together with the ID3v2 standards - see (3), (4) and (5) - may help to build more player applications of multimedia MP3 files, and editor applications as well.
 
