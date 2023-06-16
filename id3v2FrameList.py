@@ -13,8 +13,6 @@ Jens Grätzer
 
 '''
 from sys import exit
-import os
-import glob
 from tkinter import *
 from tkinter.filedialog import askopenfilename
 
@@ -185,13 +183,7 @@ def selectMp3File() :
     '''
     # Filepicker menue
     root = Tk()
-    root.filename =  askopenfilename(title = "choose your file", filetypes = (("mp3 audio files","*.mp3"),("all files","*.*")))
-    if root.filename == "" :
-        #exit(0) # Successful exit
-        #print ("Nothing selected, using default filename.")    
-        myFilename = ""
-    else : 
-        myFilename = root.filename
+    myFilename =  askopenfilename(title = "choose your file", filetypes = (("mp3 audio files","*.mp3"),("all files","*.*")))
     root.withdraw()  # Close the Tk window
     return myFilename
 
